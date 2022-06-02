@@ -43,7 +43,7 @@ function generatePassword() {
   var numericAnswer = window.confirm("Do you want to include numeric characteres?");
   var specialCharacAnswer = window.confirm("Do you want to include special characteres?");
 
-  //* if user does not include any of the criteria above, then indicate to user to "Please try again."
+  // If user does not include any of the criteria above, then indicate to user to "Please try again."
   if (lowerLettersAnswer === false && upperLettersAnswer === false && numericAnswer === false && specialCharacAnswer === false) {
     window.alert("Password declined, you must choose at least one criteria.");
     return "Please try again.";
@@ -64,7 +64,7 @@ function generatePassword() {
     totalListOfCharacters += characteres;
   }
 
-  // How big is the pool of characters to make the password
+  // How big is the group of characters to create the password
   let totalLengthOfCharacters = totalListOfCharacters.length;
 
   var randomPassword = '';
@@ -72,8 +72,11 @@ function generatePassword() {
   for(i=0; i<chosenLength; i++) {
     // Choose a random number between 0 and totalLengthOfCharacters
     var randomNumberLength = Math.floor(Math.random() * totalLengthOfCharacters);
-    randomPassword += (totalListOfCharacters[randomNumberLength]);
 
+    // Add a random character to the random password string
+    randomPassword += (totalListOfCharacters[randomNumberLength]);
   }
+
+  // Returning the random password to the caller
   return randomPassword;
 }
