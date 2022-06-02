@@ -1,6 +1,6 @@
 # **Password Generator**
 
-## **This project is about building a password generator for an employee with access to sensitive data. This allow the person to randomly generate a password that meets certain criteria providing a password with strong security** 
+## **This project is about building a password generator for an employee with access to sensitive data. This allows the person to randomly generate a password that meets certain criteria providing a password with strong security** 
 
 
 * HTML and CSS file was provided and not modified. 
