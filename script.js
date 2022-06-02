@@ -22,10 +22,10 @@ function generatePassword() {
   // Ask the user how long they want the password (8-128)
   var chosenLength = prompt ("Define the length of your password between " + minPassword + " and " + maxPassword + " characteres");
 
-  // If the number is less than 8 or greater than 128, it is invalid.
+  // If the number is less than 8 or greater than 128, it is invalid. Indicate to user to "Please try again."
   if (chosenLength < minPassword || chosenLength > maxPassword) {
-    window.alert("Please chose a number between " + minPassword + " and " + maxPassword);
-    return;
+    window.alert("Please chose a number between " + minPassword + " and " + maxPassword + ".");
+    return "Please try again.";
   }
 
   // Ask the user what characters do they want to include in the password
@@ -33,6 +33,12 @@ function generatePassword() {
   var upperLettersAnswer = window.confirm("Do you want to include uppercase letters?")
   var numericAnswer = window.confirm("Do you want to include numeric characteres?")
   var specialCharacAnswer = window.confirm("Do you want to include special characteres?")
+
+  //* if user does not include any of the criteria above, then indicate to user to "Please try again."
+  if (lowerLettersAnswer === false && upperLettersAnswer === false && numericAnswer === false && specialCharacAnswer === false) {
+    window.alert("Password declined, you must choose at least one criteria.");
+    return "Please try again.";
+  }
 
   // Add the types of characters that the user has decided they want to have included in their password 
   var totalListOfCharacters = '';
@@ -60,6 +66,5 @@ function generatePassword() {
     randomPassword += (totalListOfCharacters[randomNumberLength]);
 
   }
-
   return randomPassword;
 }
