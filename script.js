@@ -29,10 +29,10 @@ function generatePassword() {
   }
 
   // Ask the user what characters do they want to include in the password
-  var lowerLettersAnswer = window.confirm("Do you want to include lowercase letters?")
-  var upperLettersAnswer = window.confirm("Do you want to include uppercase letters?")
-  var numericAnswer = window.confirm("Do you want to include numeric characteres?")
-  var specialCharacAnswer = window.confirm("Do you want to include special characteres?")
+  var lowerLettersAnswer = window.confirm("Do you want to include lowercase letters?");
+  var upperLettersAnswer = window.confirm("Do you want to include uppercase letters?");
+  var numericAnswer = window.confirm("Do you want to include numeric characteres?");
+  var specialCharacAnswer = window.confirm("Do you want to include special characteres?");
 
   //* if user does not include any of the criteria above, then indicate to user to "Please try again."
   if (lowerLettersAnswer === false && upperLettersAnswer === false && numericAnswer === false && specialCharacAnswer === false) {
@@ -58,7 +58,7 @@ function generatePassword() {
   // How big is the pool of characters to make the password
   let totalLengthOfCharacters = totalListOfCharacters.length;
 
-  var randomPassword = ''
+  var randomPassword = '';
 
   for(i=0; i<chosenLength; i++) {
     // Choose a random number between 0 and totalLengthOfCharacters
