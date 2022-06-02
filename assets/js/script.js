@@ -22,6 +22,15 @@ function generatePassword() {
   // Ask the user how long they want the password (8-128)
   var chosenLength = prompt ("Define the length of your password between " + minPassword + " and " + maxPassword + " characteres");
 
+  // Change the string into an integer so that it is a valid number
+  chosenLength = parseInt(chosenLength);
+
+  // If we could not change it to a number, show an error
+  if (! Number.isInteger(chosenLength)) {
+    window.alert('Please include only numeric characters.');
+    return "Please try again.";
+  }
+
   // If the number is less than 8 or greater than 128, it is invalid. Indicate to user to "Please try again."
   if (chosenLength < minPassword || chosenLength > maxPassword) {
     window.alert("Please chose a number between " + minPassword + " and " + maxPassword + ".");
