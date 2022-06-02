@@ -16,4 +16,4 @@
 
 ### **Preview**
 
-![Password Generator](./ScreenshotPassword.png)
+![Password Generator](./assets/images/ScreenshotPassword.png)
