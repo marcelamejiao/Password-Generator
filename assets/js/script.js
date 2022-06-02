@@ -45,7 +45,7 @@ function generatePassword() {
 
   // If user does not include any of the criteria above, then indicate to user to "Please try again."
   if (lowerLettersAnswer === false && upperLettersAnswer === false && numericAnswer === false && specialCharacAnswer === false) {
-    window.alert("Password declined, you must choose at least one criteria.");
+    window.alert("You must choose at least one criteria.");
     return "Please try again.";
   }
 
